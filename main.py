@@ -1,5 +1,6 @@
 from constants import BoardSize
 from board import prepare_board
+from solvers import Backtrack
 
 
 if __name__ == "__main__":
@@ -8,4 +9,4 @@ if __name__ == "__main__":
         raise Exception("Incorrect board size!")
 
     board = prepare_board(board_size)
-
+    solved_board = Backtrack.solve(board)
